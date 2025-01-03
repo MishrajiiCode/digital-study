@@ -116,3 +116,62 @@ footer {
     background-color: #222;
     color: #888;
 }
+/* styles.css */
+
+/* Existing styles above... */
+
+/* Responsive styles for smaller devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .search-bar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-bar input {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+
+    .user-actions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width */
+        padding: 10px;
+        text-align: center;
+    }
+
+    .sidebar ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller video cards */
+        gap: 10px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
