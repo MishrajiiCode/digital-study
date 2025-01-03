@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: #fff;
+}
+
+header {
+    background-color: #1abc9c;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    width: 70px;
+    float: left;
+    margin-right: 20px;
+}
+
+.heading h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px yellow;
+}
+
+/* Welcome Section */
+.welcome-section, .explore-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 1200px;
+    text-align: center;
+    box-shadow: 0 6px 15px orange;
+    color: #333;
+}
+
+.welcome-section h2, .explore-section h2 {
+    font-size: 2rem;
+    color: #1abc9c;
+    margin-bottom: 20px;
+     text-shadow: 2px 2px 4px orange;
+}
+
+.welcome-section p, .explore-section p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin: 20px 0;
+}
+
+.content-image {
+    max-width: 600px; /* Standard image width */
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Review Card Section */
+.reviews-section {
+    background-color: #ecf0f1;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 15px orange;
+}
+
+.reviews-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #1abc9c;
+}
+
+.card-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    animation: scroll 20s linear infinite;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    min-width: 250px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Infinite scroll keyframes */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: #1abc9c;
+    padding: 10px;
+    color: white;
+}

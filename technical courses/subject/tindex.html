@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VedicTube</title>
+    <link rel="stylesheet" href="tstyles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo/logo.png" alt="Logo">
+        </div>
+        <div class="logo">VedicTube</div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search videos..." />
+            <button id="searchButton">Search</button>
+        </div>
+        <div class="user-actions">
+            <button id="logoutButton" style="display: none;">Logout</button>
+            <button id="loginButton">Login</button>
+            <button id="downloadDataButton" style="display: none;">Download Data</button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="about.html" id="aboutNav">About</a></li>
+                <li id="homeNav">Home</li>
+                <li id="trendingNav">Trending</li>
+                <li id="subscriptionsNav">Subscriptions</li>
+                <li id="libraryNav">Library</li>
+
+            </ul>
+        </aside>
+
+        <main>
+            <!-- Login Section -->
+            <section id="loginSection" class="content-section">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </section>
+
+            <!-- Home Section -->
+            <section id="homePage" class="content-section" style="display: none;">
+                <h2>Home</h2>
+                <div id="homeGrid" class="video-grid"></div>
+            </section>
+
+            <!-- Trending Section -->
+            <section id="trendingPage" class="content-section" style="display: none;">
+                <h2>Trending</h2>
+                <div id="trendingGrid" class="video-grid"></div>
+            </section>
+
+            <!-- Subscriptions Section -->
+            <section id="subscriptionsPage" class="content-section" style="display: none;">
+                <h2>Subscriptions</h2>
+                <div id="subscriptionsGrid" class="video-grid"></div>
+            </section>
+
+            <!-- Library Section -->
+            <section id="libraryPage" class="content-section" style="display: none;">
+                <h2>Library</h2>
+                <div id="libraryGrid" class="video-grid"></div>
+            </section>
+
+            <!-- Search Results Section -->
+            <section id="searchResultsSection" class="content-section" style="display: none;">
+                <h2>Search Results</h2>
+                <div id="searchResults" class="video-grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 MyTube. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="tscript.js"></script>
+</body>
+</html>

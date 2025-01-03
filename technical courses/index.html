@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DharmaConnect - Your Comprehensive Hindu Spiritual Platform for rituals, mythology, temples, and wellness.">
+    <meta name="keywords" content="Hinduism, Dharma, Temples, Mantra, Shloka, Panchang, Ayurveda, Spirituality">
+    <meta name="author" content="DharmaConnect">
+    <title>Degital Repositry for Educational Plateform | VedicScholars</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="tindex.html">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">VedicScholars</div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#temples">Temples</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <a href="tindex.html" class="cta-button">VedicTube</a>
+            </ul>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle Navigation">☰</button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to VedicScholars</h1>
+            <p>Your one-stop platform for Hindu rituals, mythology, wellness, and spirituality.</p>
+            <a href="explore.html" class="cta-button">Explore Features</a>
+        </div>
+        <div class="logo">
+            <img src="logo/logo.jpg" alt="VedicScholars Logo">
+        </div>
+        
+    </section>
+
+    <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="feature-cards">
+            <div class="card" data-feature="early">
+                <h3>Early Childhood Education </h3>
+                <p>LKG stands for Lower Kindergarten. It is a class for children aged three to four years, and is a crucial part of a child's education. In LKG, children are taught the basics of reading and writing, such as how to hold a pencil and draw lines.</p>
+                <button class="feature-button" oneclick="openFeatureModel('Junior', 'Mid-Junior')">Learn More</button>
+            </div>
+            <div class="card" data-feature="primary">
+                <h3>Primary Education</h3>
+                <p>Find temples worldwide and join live-streamed Aartis and Darshan from sacred places.</p>
+                <button class="feature-button" oneclick="openFeatureModel('Class 1', 'Class 2', 'Class 3', 'Class 4','Class 5')">Learn More</button>
+            </div>
+            <div class="card" data-feature="middle">
+                <h3>Middle School</h3>
+                <p>Interactive stories from Ramayana and Mahabharata.</p>
+                <button class="feature-button" oneclick="openFeatureModal('Class 6', 'Class 7', 'Class 8')">Learn More</button>
+            </div>
+            <div class="card" data-feature="high">
+                <h3>High School</h3>
+                <p>Get personalized spiritual advice based on your Rashi and track important festivals like Ekadashi and Amavasya.</p>
+                <button class="feature-button" oneclick="openFeatureModel('Class 9', 'Class 10')">Learn More</button>
+            </div>
+            <div class="card" data-feature="senior">
+                <h3>Senior High School</h3>
+                <p>Explore Ramayana and Mahabharata with interactive maps, timelines, and multimedia stories.</p>
+                <button class="feature-button" onclick="openFeatureModal('Class 11 PCM', 'Class 11 PCB', 'Class 11 Commerce','Class 11 Arts',)">Learn More</button>
+            </div>
+            <div class="card" data-feature="secondary">
+                <h3>Senior Secondary School</h3>
+                <p>Learn Sanskrit and recite Shlokas with gamified modules, including personalized recommendations.</p>
+                <button class="feature-button" onclick="openFeatureModal('Class 12 PCM', 'Class 12 PCB', 'Class 12 Commerce','Class 12 Arts')">Learn More</button>
+            </div>
+
+            <div class="card" data-feature="courses">
+                <h3>Courses</h3>
+                <p>Interactive stories and games to teach children about Hindu gods, epics, and culture.</p>
+                <button class="feature-button" onclick="openFeatureModal('Technical Courses','Management Courses','Medical Courses','Semi-Medical/Paramedical Courses','Arts and Humanities')">Learn More</button>
+            </div>
+            <div class="card" data-feature="other">
+                <h3>Other Courses</h3>
+                <p>Make donations, sponsor rituals, and contribute to charity causes directly online.</p>
+                <button class="feature-button" onclick="openFeatureModal('Vocational and Skill-Based Courses', 'Law and Legal Studies', 'Science and Research','Agriculture and Forestry','Design and Creative Arts','Mass Media and Communication')">Learn More</button>
+            </div>
+            
+            
+           
+        </div>
+    </section>
+
+    <!-- Dropdown Modal -->
+    <div id="dropdown-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="dropdown-title"></h3>
+            <p id="dropdown-description"></p>
+            <div id="dropdown-options">
+                <!-- Options dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <p>© 2024 DharmaConnect. All Rights Reserved.</p>
+            <p>Contact us at: info@dharmaconnect.com</p>
+        </div>
+    </footer>
+</body>
+</html>

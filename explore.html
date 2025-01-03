@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About | VedicScholars</title>
+    <style>
+        /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: #fff;
+}
+
+header {
+    background-color: #1abc9c;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    width: 70px;
+    float: left;
+    margin-right: 20px;
+}
+
+.heading h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px yellow;
+}
+
+/* Welcome Section */
+.welcome-section, .explore-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 1200px;
+    text-align: center;
+    box-shadow: 0 6px 15px orange;
+    color: #333;
+}
+
+.welcome-section h2, .explore-section h2 {
+    font-size: 2rem;
+    color: #1abc9c;
+    margin-bottom: 20px;
+     text-shadow: 2px 2px 4px orange;
+}
+
+.welcome-section p, .explore-section p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin: 20px 0;
+}
+
+.content-image {
+    max-width: 600px; /* Standard image width */
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Review Card Section */
+.reviews-section {
+    background-color: #ecf0f1;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 15px orange;
+}
+
+.reviews-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #1abc9c;
+}
+
+.card-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    animation: scroll 20s linear infinite;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    min-width: 250px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Infinite scroll keyframes */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: #1abc9c;
+    padding: 10px;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo/logo.png" alt="Website Logo">
+        </div>
+        <div class="heading">
+            <h1>Explore More</h1>
+        </div>
+    </header>
+
+    <section class="welcome-section">
+        <h2>Welcome to The VedicScholars</h2>
+        <p>"The Vedic Scholars" is your ultimate resource for accessing study materials, video lectures, and detailed notes across a wide range of classes. Whether you are in school or college, our platform brings everything you need to succeed in one place. From interactive video lessons to comprehensive syllabus coverage, we ensure a smooth learning experience for students of all backgrounds. Explore content that’s tailored to meet the latest educational standards with just a click. Whether you're preparing for board exams or university courses, Classwise Portal is here to assist.</p>
+        <img src="images/online-learning.jpg" alt="Online Learning" class="content-image">
+    </section>
+
+    <section class="explore-section">
+        <h2>Explore More Content</h2>
+        <p>At The Vedic Scholars, we believe in empowering students with high-quality education material that simplifies their study journey. Our website offers access to school-level courses from class 8 to class 12, covering notes, solved examples, and interactive video lessons for each topic. Our platform's college section offers equally detailed resources for courses like BCA, B.Tech, and MCA. The study material is meticulously curated by experts, ensuring that students get the best possible preparation for their exams.</p>
+        <p>Apart from notes and lectures, we provide up-to-date syllabus links for every subject, so students can track their progress and prepare with the right resources. One of our key features is the seamless integration of multimedia content to make learning engaging. Our portal is not just about theoretical knowledge; we aim to make learning interactive and enjoyable for everyone.</p>
+        <p>The Vedic Scholars also keeps students informed about the latest exam updates, ensuring you never miss an important announcement. With our dedicated section for exam and result updates, you’ll always be on track.</p>
+        <img src="images/exam-updates.jpg" alt="Exam Updates" class="content-image">
+    </section>
+
+    <!-- New Review Card Section -->
+    <section class="reviews-section">
+        <h2>What Our Students Say</h2>
+        <div class="card-wrapper">
+            <div class="card-container">
+                <!-- First set of cards -->
+                <div class="card">
+                    <img src="logo/logo.jpg" alt="Student 1">
+                    <h3>xyz</h3>
+                    <p>"Vedic Scholars helped me achieve great results in my board exams!<br> The notes and lectures were very detailed."</p>
+                </div>
+                <div class="card">
+                    <img src="images/student2.jpg" alt="Student 2">
+                    <h3>xyz</h3>
+                    <p>"This platform is a game changer!<br> The video lessons made complex topics easier to understand."</p>
+                </div>
+                <div class="card">
+                    <img src="images/student3.jpg" alt="Student 3">
+                    <h3>xyz</h3>
+                    <p>"Thanks to Vedic Scholars, I aced my college exams!<br> The study materials were spot on."</p>
+                </div>
+                <div class="card">
+                    <img src="images/student4.jpg" alt="Student 4">
+                    <h3>xyz</h3>
+                    <p>"This website made studying fun and interactive.<br> I loved the multimedia content!"</p>
+                </div>
+                <div class="card">
+                    <img src="images/student5.jpg" alt="Student 5">
+                    <h3>xyz</h3>
+                    <p>"The regular exam updates kept me on track.<br> Highly recommend it for students!"</p>
+                </div>
+                <div class="card">
+                    <img src="images/student6.jpg" alt="Student 6">
+                    <h3>xyz</h3>
+                    <p>"Vedic Scholars syllabus links and notes<br> were super helpful during my BCA course."</p>
+                </div>
+                <div class="card">
+                    <img src="images/student7.jpg" alt="Student 7">
+                    <h3>xyz</h3>
+                    <p>"The seamless integration of lectures and notes<br> is what makes this platform stand out."</p>
+                </div>
+                <div class="card">
+                    <img src="images/student8.jpg" alt="Student 8">
+                    <h3>xyz</h3>
+                    <p>"Vedic Scholars was a lifesaver during my exam prep.<br> I loved the content."</p>
+                </div>
+                <div class="card">
+                    <img src="images/student9.jpg" alt="Student 9">
+                    <h3>xyz</h3>
+                    <p>"I can't thank Vedic Scholars enough for making<br> complex subjects so easy to learn."</p>
+                </div>
+                <div class="card">
+                    <img src="images/student10.jpg" alt="Student 10">
+                    <h3>xyz</h3>
+                    <p>"This website helped me stay organized and <br>up to date with the syllabus. Great resource!"</p>
+                </div>
+                <!-- Duplicate the same set of cards for infinite scrolling effect -->
+                <div class="card">
+                    <img src="images/student1.jpg" alt="Student 1">
+                    <h3>xyz</h3>
+                    <p>"Vedic Scholars helped me achieve great results in my board exams!<br> The notes and lectures were very detailed."</p>
+                </div>
+                <div class="card">
+                    <img src="images/student2.jpg" alt="Student 2">
+                    <h3>xyz</h3>
+                    <p>"This platform is a game changer!<br> The video lessons made complex topics easier to understand."</p>
+                </div>
+                <!-- Continue duplicating for smooth transition... -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Vedic Scholars. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DharmaConnect - Your Comprehensive Hindu Spiritual Platform for rituals, mythology, temples, and wellness.">
+    <meta name="keywords" content="Hinduism, Dharma, Temples, Mantra, Shloka, Panchang, Ayurveda, Spirituality">
+    <meta name="author" content="DharmaConnect">
+    <title>Degital Repositry for Educational Plateform | VedicScholars</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">VedicScholars</div>
+        <button class="nav-toggle" aria-label="Toggle Navigation">☰</button>
+        <a href="tindex.html" class="cta-button">VedicTube</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to DharmaConnect</h1>
+            <p>Your one-stop platform for Hindu rituals, mythology, wellness, and spirituality.</p>
+            <a href="#features" class="cta-button">Explore Features</a>
+        </div>
+        <div class="logo">
+            <img src="logo.jpg" alt="VedicScholars Logo">
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="feature-cards">
+            <div class="card" data-feature="chemistry">
+                <h3>Chemistry</h3>
+                <p>Select the Chapter from the Given Button.</p>
+                <button class="feature-button" oneclick="openFeatureModel()">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dropdown Modal -->
+    <div id="dropdown-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="dropdown-title"></h3>
+            <p id="dropdown-description"></p>
+            <div id="dropdown-options">
+                <!-- Options dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    // Toggle Mobile Navigation
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Modal and Dropdown Functionality
+const cards = document.querySelectorAll('.card');
+const dropdownModal = document.querySelector('#dropdown-modal');
+const dropdownTitle = document.querySelector('#dropdown-title');
+const dropdownDescription = document.querySelector('#dropdown-description');
+const dropdownOptions = document.querySelector('#dropdown-options');
+const closeButton = document.querySelector('.close-button');
+
+// Feature Data with Dropdown Options
+const featureData = {
+    chemistry: {
+        title: 'Topic For LKG',
+        description: 'Select the Topic for LKG you need to assistance with:',
+        options: ['Chemical Reactions and Equations', 'Acids, Bases, and Salts','Metals and Non-metals','Carbon and Its Compounds','Periodic Classification of Elements'],
+    },
+};
+
+// Handle card click to open dropdown modal
+cards.forEach((card) => {
+    card.addEventListener('click', () => {
+        const feature = card.getAttribute('data-feature');
+        const data = featureData[feature];
+        dropdownTitle.textContent = data.title;
+        dropdownDescription.textContent = data.description;
+
+        // Clear previous options
+        dropdownOptions.innerHTML = '';
+
+        // Add new dropdown options
+        data.options.forEach((option) => {
+            const button = document.createElement('button');
+            button.className = 'dropdown-option';
+            button.textContent = option;
+
+            // Handle option click for navigation
+            button.addEventListener('click', () => {
+                // Redirect based on the selected option
+                switch (option.toLowerCase()) {
+                    case "light reflection and refraction":
+                        location.href = 'physics/light.html';  // Adjust the path if needed
+                        break;
+                    case "the human eye and the colourful world":
+                        location.href = 'physics/human eye.html';  // Adjust the path if needed
+                        break;
+                    case "electricity":
+                        location.href = 'physics/electricity.html';  // Adjust the path if needed
+                        break;
+                    case "magnetic effects of electric current":
+                        location.href = 'physics/magenitic.html';  // Adjust the path if needed
+                        break;
+                    case "sources of energy":
+                        location.href = 'physics/source.html';  // Adjust the path if needed
+                        break;
+                    default:
+                        console.log(`No action defined for ${option}`);
+                }
+            });
+
+            dropdownOptions.appendChild(button);
+        });
+
+        // Show the modal
+        dropdownModal.style.display = 'flex';
+    });
+});
+
+// Close Modal
+closeButton.addEventListener('click', () => {
+    dropdownModal.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === dropdownModal) {
+        dropdownModal.style.display = 'none';
+    }
+});
+</script>
+</html>
